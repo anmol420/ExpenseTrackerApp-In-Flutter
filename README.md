@@ -1,3 +1,3 @@
 # expense_tracker_app
 
-*full project out soon*
+*full project out soon**
