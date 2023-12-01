@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:expense_tracker_app/models/expense.dart';
+import 'package:expense_tracker_app/widgets/chart/chart.dart';
 import 'package:expense_tracker_app/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker_app/widgets/new_expense.dart';
 
@@ -15,7 +16,7 @@ class Expenses extends StatefulWidget {
 
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
-    Expense(
+    /*Expense(
       title: 'Flutter Course',
       amount: 399,
       date: DateTime.now(),
@@ -26,7 +27,7 @@ class _ExpensesState extends State<Expenses> {
       amount: 250,
       date: DateTime.now(),
       category: Category.leisure,
-    ),
+    ),*/
   ];
 
   void _openAddExpenseOverlay() {
@@ -96,7 +97,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('Chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           ),
